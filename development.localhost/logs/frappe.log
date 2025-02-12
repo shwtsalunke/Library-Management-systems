@@ -1,0 +1,513 @@
+2024-12-05 20:17:22,437 ERROR frappe Could not take error snapshot: No module named 'library_management'
+Site: development.localhost
+Form Dict: {}
+Traceback (most recent call last):
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/app.py", line 99, in application
+    init_request(request)
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/app.py", line 172, in init_request
+    frappe.init(site=site, sites_path=_sites_path, force=True)
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/__init__.py", line 257, in init
+    setup_module_map(include_all_apps=not (frappe.request or frappe.job or frappe.flags.in_migrate))
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/__init__.py", line 1649, in setup_module_map
+    for module in get_module_list(app):
+                  ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/__init__.py", line 1497, in get_module_list
+    return get_file_items(get_app_path(app_name, "modules.txt"))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/__init__.py", line 1462, in get_app_path
+    return get_pymodule_path(app_name, *joins)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/__init__.py", line 1492, in get_pymodule_path
+    return abspath(join(dirname(get_module(scrub(modulename)).__file__ or ""), *joins))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/__init__.py", line 1433, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/frappe/.pyenv/versions/3.11.6/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/error.py", line 86, in log_error_snapshot
+    log_error(title=str(exception), defer_insert=True)
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/error.py", line 61, in log_error
+    error_log = frappe.get_doc(
+                ^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/__init__.py", line 1290, in get_doc
+    doc = frappe.model.document.get_doc(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/model/base_document.py", line 66, in get_controller
+    return import_controller(doctype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/model/base_document.py", line 88, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/__init__.py", line 1598, in get_hooks
+    hooks = _dict(_load_app_hooks())
+                  ^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/caching.py", line 47, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/__init__.py", line 1567, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/__init__.py", line 1433, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/frappe/.pyenv/versions/3.11.6/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1126, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management'
+2024-12-05 20:17:39,049 ERROR frappe Could not take error snapshot: No module named 'library_management'
+Site: development.localhost
+Form Dict: {}
+Traceback (most recent call last):
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/app.py", line 99, in application
+    init_request(request)
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/app.py", line 172, in init_request
+    frappe.init(site=site, sites_path=_sites_path, force=True)
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/__init__.py", line 257, in init
+    setup_module_map(include_all_apps=not (frappe.request or frappe.job or frappe.flags.in_migrate))
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/__init__.py", line 1649, in setup_module_map
+    for module in get_module_list(app):
+                  ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/__init__.py", line 1497, in get_module_list
+    return get_file_items(get_app_path(app_name, "modules.txt"))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/__init__.py", line 1462, in get_app_path
+    return get_pymodule_path(app_name, *joins)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/__init__.py", line 1492, in get_pymodule_path
+    return abspath(join(dirname(get_module(scrub(modulename)).__file__ or ""), *joins))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/__init__.py", line 1433, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/frappe/.pyenv/versions/3.11.6/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/error.py", line 86, in log_error_snapshot
+    log_error(title=str(exception), defer_insert=True)
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/error.py", line 61, in log_error
+    error_log = frappe.get_doc(
+                ^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/__init__.py", line 1290, in get_doc
+    doc = frappe.model.document.get_doc(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/model/base_document.py", line 66, in get_controller
+    return import_controller(doctype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/model/base_document.py", line 88, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/__init__.py", line 1598, in get_hooks
+    hooks = _dict(_load_app_hooks())
+                  ^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/utils/caching.py", line 47, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/__init__.py", line 1567, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/development/frappe-bench/apps/frappe/frappe/__init__.py", line 1433, in get_module
+    return importlib.import_module(modulename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/frappe/.pyenv/versions/3.11.6/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1126, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1140, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'library_management'
+2024-12-09 18:30:02,135 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doctype': 'Library Membership', 'with_parent': '1', 'cached_timestamp': '2024-12-06 17:43:21.972515', 'cmd': 'frappe.desk.form.load.getdoctype'}
+2024-12-09 18:30:53,357 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doctype': 'Library Membership', 'with_parent': '1', 'cached_timestamp': '2024-12-06 17:43:21.972515', 'cmd': 'frappe.desk.form.load.getdoctype'}
+2024-12-09 18:31:39,537 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doctype': 'Library Transaction', 'with_parent': '1', 'cached_timestamp': '2024-12-08 21:00:07.440108', 'cmd': 'frappe.desk.form.load.getdoctype'}
+2024-12-09 18:31:59,187 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doctype': 'Library Transaction', 'with_parent': '1', 'cached_timestamp': '2024-12-08 21:00:07.440108', 'cmd': 'frappe.desk.form.load.getdoctype'}
+2024-12-09 18:32:14,539 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doctype': 'Library Transaction', 'with_parent': '1', 'cached_timestamp': '2024-12-08 21:00:07.440108', 'cmd': 'frappe.desk.form.load.getdoctype'}
+2024-12-09 18:41:59,998 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doctype': 'Library Transaction', 'with_parent': '1', 'cached_timestamp': '2024-12-08 21:00:07.440108', 'cmd': 'frappe.desk.form.load.getdoctype'}
+2024-12-09 18:45:32,631 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doctype': 'Library Transaction', 'with_parent': '1', 'cached_timestamp': '2024-12-08 21:00:07.440108', 'cmd': 'frappe.desk.form.load.getdoctype'}
+2024-12-09 18:46:46,456 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doctype': 'Library Transaction', 'with_parent': '1', 'cached_timestamp': '2024-12-08 21:00:07.440108', 'cmd': 'frappe.desk.form.load.getdoctype'}
+2024-12-09 18:55:28,827 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doctype': 'Library Transaction', 'with_parent': '1', 'cached_timestamp': '2024-12-08 21:00:07.440108', 'cmd': 'frappe.desk.form.load.getdoctype'}
+2024-12-09 18:55:52,721 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doctype': 'Library Transaction', 'with_parent': '1', 'cached_timestamp': '2024-12-08 21:00:07.440108', 'cmd': 'frappe.desk.form.load.getdoctype'}
+2024-12-09 18:59:18,047 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doctype': 'Library Membership', 'with_parent': '1', 'cached_timestamp': '2024-12-06 17:43:21.972515', 'cmd': 'frappe.desk.form.load.getdoctype'}
+2024-12-09 19:05:02,501 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doctype': 'Library Membership', 'with_parent': '1', 'cached_timestamp': '2024-12-06 17:43:21.972515', 'cmd': 'frappe.desk.form.load.getdoctype'}
+2024-12-09 19:05:59,957 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doctype': 'Library Transaction', 'with_parent': '1', 'cached_timestamp': '2024-12-08 21:00:07.440108', 'cmd': 'frappe.desk.form.load.getdoctype'}
+2024-12-09 19:19:17,973 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doctype': 'Library Transaction', 'with_parent': '1', 'cached_timestamp': '2024-12-08 21:00:07.440108', 'cmd': 'frappe.desk.form.load.getdoctype'}
+2024-12-09 19:21:08,907 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doctype': 'Library Membership', 'with_parent': '1', 'cached_timestamp': '2024-12-06 17:43:21.972515', 'cmd': 'frappe.desk.form.load.getdoctype'}
+2024-12-09 19:37:36,166 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doctype': 'Library Transaction', 'with_parent': '1', 'cached_timestamp': '2024-12-08 21:00:07.440108', 'cmd': 'frappe.desk.form.load.getdoctype'}
+2024-12-09 19:56:38,762 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doctype': 'Library Membership', 'with_parent': '1', 'cached_timestamp': '2024-12-06 17:43:21.972515', 'cmd': 'frappe.desk.form.load.getdoctype'}
+2024-12-09 19:57:47,564 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doctype': 'Library Membership', 'with_parent': '1', 'cached_timestamp': '2024-12-06 17:43:21.972515', 'cmd': 'frappe.desk.form.load.getdoctype'}
+2024-12-09 20:03:20,978 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doctype': 'Library Membership', 'with_parent': '1', 'cached_timestamp': '2024-12-06 17:43:21.972515', 'cmd': 'frappe.desk.form.load.getdoctype'}
+2024-12-09 20:06:57,087 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doctype': 'Library Transaction', 'with_parent': '1', 'cached_timestamp': '2024-12-08 21:00:07.440108', 'cmd': 'frappe.desk.form.load.getdoctype'}
+2024-12-09 20:09:16,660 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doctype': 'Library Transaction', 'with_parent': '1', 'cached_timestamp': '2024-12-08 21:00:07.440108', 'cmd': 'frappe.desk.form.load.getdoctype'}
+2024-12-09 20:09:44,958 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doctype': 'Library Transaction', 'with_parent': '1', 'cached_timestamp': '2024-12-08 21:00:07.440108', 'cmd': 'frappe.desk.form.load.getdoctype'}
+2024-12-09 20:30:06,634 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doctype': 'Library Membership', 'with_parent': '1', 'cached_timestamp': '2024-12-06 17:43:21.972515', 'cmd': 'frappe.desk.form.load.getdoctype'}
+2024-12-10 02:18:35,378 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00002","owner":"Administrator","creation":"2024-12-09 21:17:42.063563","modified":"2024-12-09 21:17:42.063563","modified_by":"Administrator","docstatus":0,"idx":0,"amended_from":null,"article":"The Alchemist","library_member":"LM00002","date":"2024-02-02","type":"Return","doctype":"Library Transaction","__last_sync_on":"2024-12-10T02:17:42.375Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 14:35:39,829 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 09:35:19.577113","modified":"2024-12-10 09:35:19.577113","modified_by":"Administrator","docstatus":0,"idx":0,"article":"The Alchemist","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 14:36:53,618 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 09:35:19.577113","modified":"2024-12-10 09:35:19.577113","modified_by":"Administrator","docstatus":0,"idx":0,"article":"The Alchemist","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 14:38:13,828 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 09:35:19.577113","modified":"2024-12-10 09:35:19.577113","modified_by":"Administrator","docstatus":0,"idx":0,"article":"The Alchemist","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 14:40:36,719 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 09:35:19.577113","modified":"2024-12-10 09:35:19.577113","modified_by":"Administrator","docstatus":0,"idx":0,"article":"The Alchemist","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction","__last_sync_on":"2024-12-10T14:40:28.707Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 14:40:55,080 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 09:35:19.577113","modified":"2024-12-10 09:35:19.577113","modified_by":"Administrator","docstatus":0,"idx":0,"article":"The Alchemist","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction","__last_sync_on":"2024-12-10T14:40:28.707Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 14:43:53,150 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 09:35:19.577113","modified":"2024-12-10 09:35:19.577113","modified_by":"Administrator","docstatus":0,"idx":0,"article":"The Alchemist","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction","__last_sync_on":"2024-12-10T14:43:47.721Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 14:45:04,968 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 09:35:19.577113","modified":"2024-12-10 09:35:19.577113","modified_by":"Administrator","docstatus":0,"idx":0,"article":"The Alchemist","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction","__last_sync_on":"2024-12-10T14:43:47.721Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 14:47:17,357 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 09:35:19.577113","modified":"2024-12-10 09:35:19.577113","modified_by":"Administrator","docstatus":0,"idx":0,"article":"The Alchemist","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction","__last_sync_on":"2024-12-10T14:43:47.721Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 14:48:43,533 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 09:48:33.220949","modified":"2024-12-10 09:48:33.220949","modified_by":"Administrator","docstatus":0,"idx":0,"article":"The Alchemist","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 14:50:17,658 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 09:48:33.220949","modified":"2024-12-10 09:48:33.220949","modified_by":"Administrator","docstatus":0,"idx":0,"article":"The Alchemist","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 14:51:21,242 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 09:48:33.220949","modified":"2024-12-10 09:48:33.220949","modified_by":"Administrator","docstatus":0,"idx":0,"article":"The Alchemist","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 15:00:45,362 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 09:48:33.220949","modified":"2024-12-10 09:48:33.220949","modified_by":"Administrator","docstatus":0,"idx":0,"article":"The Alchemist","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 15:01:45,704 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 10:01:39.840018","modified":"2024-12-10 10:01:39.840018","modified_by":"Administrator","docstatus":0,"idx":0,"article":"Happy Place","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 15:02:20,231 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 10:01:39.840018","modified":"2024-12-10 10:01:39.840018","modified_by":"Administrator","docstatus":0,"idx":0,"article":"Happy Place","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 15:06:25,368 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 10:01:39.840018","modified":"2024-12-10 10:01:39.840018","modified_by":"Administrator","docstatus":0,"idx":0,"article":"Happy Place","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction","__last_sync_on":"2024-12-10T15:06:20.954Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 15:08:02,183 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 10:01:39.840018","modified":"2024-12-10 10:01:39.840018","modified_by":"Administrator","docstatus":0,"idx":0,"article":"Happy Place","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction","__last_sync_on":"2024-12-10T15:06:20.954Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 15:13:25,337 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 10:01:39.840018","modified":"2024-12-10 10:01:39.840018","modified_by":"Administrator","docstatus":0,"idx":0,"article":"Happy Place","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction","__last_sync_on":"2024-12-10T15:06:20.954Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 15:16:28,039 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 10:01:39.840018","modified":"2024-12-10 10:01:39.840018","modified_by":"Administrator","docstatus":0,"idx":0,"article":"Happy Place","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction","__last_sync_on":"2024-12-10T15:16:23.691Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 15:17:05,413 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 10:01:39.840018","modified":"2024-12-10 10:01:39.840018","modified_by":"Administrator","docstatus":0,"idx":0,"article":"Happy Place","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction","__last_sync_on":"2024-12-10T15:16:23.691Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 15:17:31,393 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 10:01:39.840018","modified":"2024-12-10 10:01:39.840018","modified_by":"Administrator","docstatus":0,"idx":0,"article":"Happy Place","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction","__last_sync_on":"2024-12-10T15:17:27.076Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 15:22:07,364 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 10:01:39.840018","modified":"2024-12-10 10:01:39.840018","modified_by":"Administrator","docstatus":0,"idx":0,"article":"Happy Place","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction","__last_sync_on":"2024-12-10T15:22:03.384Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 15:23:36,062 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 10:01:39.840018","modified":"2024-12-10 10:01:39.840018","modified_by":"Administrator","docstatus":0,"idx":0,"article":"Happy Place","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction","__last_sync_on":"2024-12-10T15:23:32.586Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 15:25:49,453 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 10:01:39.840018","modified":"2024-12-10 10:01:39.840018","modified_by":"Administrator","docstatus":0,"idx":0,"article":"Happy Place","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction","__last_sync_on":"2024-12-10T15:25:46.786Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 15:32:30,260 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 10:01:39.840018","modified":"2024-12-10 10:32:10.497224","modified_by":"Administrator","docstatus":0,"idx":0,"article":"Happy Place","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 18:01:00,167 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 10:01:39.840018","modified":"2024-12-10 11:53:17.948175","modified_by":"Administrator","docstatus":0,"idx":0,"article":"The Alchemist","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 18:20:37,765 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 10:01:39.840018","modified":"2024-12-10 11:53:17.948175","modified_by":"Administrator","docstatus":0,"idx":0,"article":"The Alchemist","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction","__last_sync_on":"2024-12-10T18:20:31.158Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 18:32:02,578 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 10:01:39.840018","modified":"2024-12-10 11:53:17.948175","modified_by":"Administrator","docstatus":0,"idx":0,"article":"The Alchemist","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction","__last_sync_on":"2024-12-10T18:31:59.640Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 18:32:24,356 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 10:01:39.840018","modified":"2024-12-10 11:53:17.948175","modified_by":"Administrator","docstatus":0,"idx":0,"article":"The Alchemist","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction","__last_sync_on":"2024-12-10T18:31:59.640Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 18:32:58,524 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 10:01:39.840018","modified":"2024-12-10 11:53:17.948175","modified_by":"Administrator","docstatus":0,"idx":0,"article":"The Alchemist","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction","__last_sync_on":"2024-12-10T18:31:59.640Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 18:41:26,579 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 10:01:39.840018","modified":"2024-12-10 11:53:17.948175","modified_by":"Administrator","docstatus":0,"idx":0,"article":"The Alchemist","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction","__last_sync_on":"2024-12-10T18:41:14.945Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 18:51:29,847 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 10:01:39.840018","modified":"2024-12-10 11:53:17.948175","modified_by":"Administrator","docstatus":0,"idx":0,"article":"The Alchemist","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction","__last_sync_on":"2024-12-10T18:51:25.690Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 18:53:22,963 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 10:01:39.840018","modified":"2024-12-10 11:53:17.948175","modified_by":"Administrator","docstatus":0,"idx":0,"article":"The Alchemist","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction","__last_sync_on":"2024-12-10T18:51:25.690Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 18:54:25,114 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 10:01:39.840018","modified":"2024-12-10 11:53:17.948175","modified_by":"Administrator","docstatus":0,"idx":0,"article":"The Alchemist","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction","__last_sync_on":"2024-12-10T18:51:25.690Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 18:54:55,560 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 10:01:39.840018","modified":"2024-12-10 11:53:17.948175","modified_by":"Administrator","docstatus":0,"idx":0,"article":"The Alchemist","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction","__last_sync_on":"2024-12-10T18:54:50.485Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 18:56:03,298 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 10:01:39.840018","modified":"2024-12-10 11:53:17.948175","modified_by":"Administrator","docstatus":0,"idx":0,"article":"The Alchemist","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction","__last_sync_on":"2024-12-10T18:54:50.485Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 18:57:10,830 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 10:01:39.840018","modified":"2024-12-10 11:53:17.948175","modified_by":"Administrator","docstatus":0,"idx":0,"article":"The Alchemist","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction","__last_sync_on":"2024-12-10T18:54:50.485Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 18:57:18,320 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 10:01:39.840018","modified":"2024-12-10 11:53:17.948175","modified_by":"Administrator","docstatus":0,"idx":0,"article":"The Alchemist","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction","__last_sync_on":"2024-12-10T18:54:50.485Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 19:01:14,638 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 10:01:39.840018","modified":"2024-12-10 11:53:17.948175","modified_by":"Administrator","docstatus":0,"idx":0,"article":"The Alchemist","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction","__last_sync_on":"2024-12-10T18:54:50.485Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 19:03:23,991 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 10:01:39.840018","modified":"2024-12-10 11:53:17.948175","modified_by":"Administrator","docstatus":0,"idx":0,"article":"The Alchemist","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction","__last_sync_on":"2024-12-10T19:03:20.533Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 19:06:15,954 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 10:01:39.840018","modified":"2024-12-10 11:53:17.948175","modified_by":"Administrator","docstatus":0,"idx":0,"article":"The Alchemist","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction","__last_sync_on":"2024-12-10T19:05:46.944Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 19:06:55,612 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 10:01:39.840018","modified":"2024-12-10 11:53:17.948175","modified_by":"Administrator","docstatus":0,"idx":0,"article":"The Alchemist","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction","__last_sync_on":"2024-12-10T19:05:46.944Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-10 19:07:09,575 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'doc': '{"name":"LT00001","owner":"Administrator","creation":"2024-12-10 10:01:39.840018","modified":"2024-12-10 11:53:17.948175","modified_by":"Administrator","docstatus":0,"idx":0,"article":"The Alchemist","library_member":"LM00002","date":"2024-01-03","type":"Issue","doctype":"Library Transaction","__last_sync_on":"2024-12-10T19:07:05.217Z"}', 'action': 'Submit', 'cmd': 'frappe.desk.form.save.savedocs'}
+2024-12-12 00:56:37,186 ERROR frappe Error while inserting deferred Error Log record: Error Log nbvvfjcd1k: 'Title' (Module import failed for Library Settings, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.library_settings') will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2024-12-12 00:56:37,208 ERROR frappe Error while inserting deferred Error Log record: Error Log bnrvc3mdj4: 'Title' (Module import failed for Library Settings, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.library_settings') will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2024-12-12 00:56:37,229 ERROR frappe Error while inserting deferred Error Log record: Error Log fs5nfm4vj2: 'Title' (Module import failed for Library Settings, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.library_settings') will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2024-12-12 00:56:37,250 ERROR frappe Error while inserting deferred Error Log record: Error Log uckjbp0ekm: 'Title' (Module import failed for Library Settings, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.library_settings') will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2024-12-12 00:56:37,269 ERROR frappe Error while inserting deferred Error Log record: Error Log 8tl0te8rl9: 'Title' (Module import failed for Library Settings, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.library_settings') will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2024-12-12 00:56:37,289 ERROR frappe Error while inserting deferred Error Log record: Error Log n230qdf6se: 'Title' (Module import failed for Library Settings, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.library_settings') will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2024-12-12 00:56:37,305 ERROR frappe Error while inserting deferred Error Log record: Error Log pqdcaair92: 'Title' (Module import failed for Library Settings, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.library_settings') will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2024-12-12 00:56:37,320 ERROR frappe Error while inserting deferred Error Log record: Error Log ef4gt77lac: 'Title' (Module import failed for Library Settings, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.library_settings') will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2024-12-12 00:56:37,337 ERROR frappe Error while inserting deferred Error Log record: Error Log o5s6rp184b: 'Title' (Module import failed for Library Settings, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.library_settings') will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2024-12-12 00:56:37,354 ERROR frappe Error while inserting deferred Error Log record: Error Log tqcgblecsn: 'Title' (Module import failed for Library Settings, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.library_settings') will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2024-12-12 00:56:37,370 ERROR frappe Error while inserting deferred Error Log record: Error Log 2kpd9ec6je: 'Title' (Module import failed for Library Settings, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.library_settings') will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2024-12-12 00:56:37,386 ERROR frappe Error while inserting deferred Error Log record: Error Log 1gmnrkier8: 'Title' (Module import failed for Library Settings, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.library_settings') will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2024-12-12 00:56:37,403 ERROR frappe Error while inserting deferred Error Log record: Error Log vo6m6hukhl: 'Title' (Module import failed for Library Settings, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.library_settings') will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2024-12-12 00:56:37,418 ERROR frappe Error while inserting deferred Error Log record: Error Log a3kqvcnd94: 'Title' (Module import failed for Library Settings, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.library_settings') will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2024-12-12 00:56:37,432 ERROR frappe Error while inserting deferred Error Log record: Error Log 1qa2ulu2kt: 'Title' (Module import failed for Library Settings, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.library_settings') will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2024-12-12 00:56:37,445 ERROR frappe Error while inserting deferred Error Log record: Error Log 5mukil9an4: 'Title' (Module import failed for Library Settings, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.library_settings') will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2024-12-12 00:56:37,457 ERROR frappe Error while inserting deferred Error Log record: Error Log s71sr4a27j: 'Title' (Module import failed for Library Settings, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.library_settings') will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2024-12-12 00:56:37,469 ERROR frappe Error while inserting deferred Error Log record: Error Log ai5bshk5f8: 'Title' (Module import failed for Library Settings, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.library_settings') will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2024-12-12 00:56:37,481 ERROR frappe Error while inserting deferred Error Log record: Error Log tkoq0rael2: 'Title' (Module import failed for Library Settings, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.library_settings') will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2024-12-12 00:56:37,493 ERROR frappe Error while inserting deferred Error Log record: Error Log r3qg0pegbc: 'Title' (Module import failed for Library Settings, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.library_settings') will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2024-12-12 00:56:37,505 ERROR frappe Error while inserting deferred Error Log record: Error Log hi7l0moa60: 'Title' (Module import failed for Library Settings, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.library_settings') will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2024-12-12 00:56:37,518 ERROR frappe Error while inserting deferred Error Log record: Error Log 1h0a2es55r: 'Title' (Module import failed for Library Settings, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.library_settings') will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2024-12-12 00:56:37,528 ERROR frappe Error while inserting deferred Error Log record: Error Log 4un2stld8g: 'Title' (Module import failed for Library Settings, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.library_settings') will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2024-12-12 00:56:37,541 ERROR frappe Error while inserting deferred Error Log record: Error Log o6dd1msd0e: 'Title' (Module import failed for Library Settings, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.library_settings') will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2024-12-12 00:56:37,554 ERROR frappe Error while inserting deferred Error Log record: Error Log 9cqa2dntao: 'Title' (Module import failed for Library Settings, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.library_settings') will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2024-12-12 00:56:37,566 ERROR frappe Error while inserting deferred Error Log record: Error Log gderhqpd5h: 'Title' (Module import failed for Library Settings, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.library_settings') will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2024-12-12 00:56:37,580 ERROR frappe Error while inserting deferred Error Log record: Error Log 4ollmcti62: 'Title' (Module import failed for Library Settings, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.library_settings') will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2024-12-12 00:56:37,592 ERROR frappe Error while inserting deferred Error Log record: Error Log b6iov2fgq2: 'Title' (Module import failed for Library Settings, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.library_settings') will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2024-12-12 00:56:37,604 ERROR frappe Error while inserting deferred Error Log record: Error Log r5k1gi96mj: 'Title' (Module import failed for Library Settings, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.library_settings') will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2024-12-12 00:56:37,615 ERROR frappe Error while inserting deferred Error Log record: Error Log q417thkv4c: 'Title' (Module import failed for Library Settings, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.library_settings') will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2024-12-12 00:56:37,627 ERROR frappe Error while inserting deferred Error Log record: Error Log t70a497k9d: 'Title' (Module import failed for Library Settings, the DocType you're trying to open might be deleted.
+Error: No module named 'frappe.core.doctype.library_settings') will get truncated, as max characters allowed is 140
+Site: development.localhost
+Form Dict: {}
+2024-12-12 20:18:08,382 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'article': 'Rich dad Poor Dad', 'cmd': 'get_article_issued_count'}
+2024-12-12 20:18:08,382 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'article': 'Test', 'cmd': 'get_article_issued_count'}
+2024-12-12 20:18:08,384 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'article': 'Test', 'cmd': 'get_article_issued_count'}
+2024-12-12 20:18:17,198 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'article': 'Indiana Jones and the Great Circle Game Guide: Uncover Every Hidden Secrets', 'cmd': 'get_article_issued_count'}
+2024-12-12 20:18:55,550 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'article': 'Rich dad Poor Dad', 'cmd': 'get_article_issued_count'}
+2024-12-12 20:20:24,264 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'article': 'Rich dad Poor Dad', 'cmd': 'get_article_issued_count'}
+2024-12-12 20:22:23,359 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'article': 'Rich dad Poor Dad', 'cmd': 'get_article_issued_count'}
+2024-12-12 20:24:49,176 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'article': 'Rich dad Poor Dad', 'cmd': 'get_article_issued_count'}
+2024-12-12 20:26:33,257 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'article': 'Rich dad Poor Dad', 'cmd': 'get_article_issued_count'}
+2024-12-12 20:28:47,275 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'article': 'Rich dad Poor Dad', 'cmd': 'get_article_issued_count'}
+2024-12-12 20:34:00,762 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'article': 'Rich dad Poor Dad', 'cmd': 'get_article_issued_count'}
+2024-12-12 20:34:36,092 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'article': 'Rich dad Poor Dad', 'cmd': 'get_article_issued_count'}
+2024-12-12 20:39:13,509 ERROR frappe New Exception collected in error log
+Site: development.localhost
+Form Dict: {'article': 'Rich dad Poor Dad', 'cmd': 'get_article_issued_count'}
